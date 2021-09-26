@@ -1,0 +1,33 @@
+{
+  "name": "scss-development",
+  "version": "0.1.0",
+  "description": "SCSS development template for frontend developers",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html --open --log-level 3",
+    "build": "parcel build src/index.html --target  browser -d build",
+    "serve": "parcel build/index.html --open --port 3000 --no-hmr --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammad4kh/SCSS-development.git"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "css",
+    "frontend",
+    "web",
+    "development"
+  ],
+  "author": "Mohammad Khaled",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohammad4kh/SCSS-development/issues"
+  },
+  "homepage": "https://github.com/mohammad4kh/SCSS-development#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.42.1"
+  }
+}
