@@ -1,13 +1,13 @@
 {
-  "name": "scss-app",
+  "name": "create-scss-app",
   "version": "0.1.0",
   "description": "SCSS development template for frontend developers",
   "default": "src/index.html",
   "bin": {
-    "parcel-app": "./bin/create-app.js"
+    "create-scss-app": "./bin/create-app.js"
   },
   "scripts": {
-    "start": "npm run clean && parcel src/index.html --open --log-level info --hot",
+    "start": "npm run clean && parcel src/index.html --open --log-level 3",
     "build": "npm run clean && parcel build src/index.html --target  browser -d build",
     "serve": "parcel build/index.html --open --port 3000 --no-hmr --no-cache",
     "clean": "rimraf ./dist && rimraf ./.cache && rimraf ./build"

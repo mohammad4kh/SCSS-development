@@ -54,21 +54,21 @@ async function setup() {
 
     process.chdir(appPath);
 
-    // console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
-    // await runCmd('npm install');
-    // console.log();
+    console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
+    await runCmd('npm install');
+    console.log();
 
     await runCmd('npx rimraf ./.git');
 
     fs.unlinkSync(path.join(appPath, 'LICENSE'));
-    fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
+    fs.rmSync(path.join(appPath, 'bin'), { recursive: true });
     fs.unlinkSync(path.join(appPath, 'package.json'));
 
     buildPackageJson(packageJson, folderName);
 
     console.log(
       '\x1b[32m',
-      'The installation is done, this is ready to use !',
+      `${folderName} is created.`,
       '\x1b[0m'
     );
     console.log();
