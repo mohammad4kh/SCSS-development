@@ -103,7 +103,7 @@ function buildPackageJson(packageJson, folderName) {
     description: '',
     author: '',
     scripts: {
-        start: "npm run clean && parcel src/index.html --open --log-level info --hot",
+        start: "npm run clean && parcel src/index.html --open --log-level 3",
         build: "npm run clean && parcel build src/index.html --target  browser -d build",
         serve: "parcel build/index.html --open --port 3000 --no-hmr --no-cache",
         clean: "rimraf ./dist && rimraf ./.cache && rimraf ./build"
